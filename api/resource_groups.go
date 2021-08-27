@@ -180,6 +180,13 @@ func (group ResourceGroupData) ResourceGroupType() ResourceGroupType {
 	return t
 }
 
+func (group ResourceGroupData) Status() string {
+	if group.Enabled == 1 {
+		return "Enabled"
+	}
+	return "Disabled"
+}
+
 type ResourceGroupRaw struct {
 	ResourceGroupData
 }
